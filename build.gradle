@@ -29,6 +29,12 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "dio_rest_api_na_nuvem.Application"
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
